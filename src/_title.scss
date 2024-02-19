@@ -1,0 +1,38 @@
+.title {
+    font: {
+        size:1.8rem;
+        weight: 600;
+    }
+    display: flex;
+    align-items: center;
+    gap:8px;
+
+    &__icon {
+        width: 37px;
+        height:37px;
+    }
+
+    &__text {
+        
+        opacity:0;
+        @include transition(opacity);
+
+        @include screen {
+            display:block;
+            opacity:1;
+        }
+
+        &+span{
+            color: #838383!important;
+            font-size: 10px;
+            align-self:flex-end;
+            
+
+            @include screen {
+                display:block;
+            }
+        } 
+    }
+
+    
+}

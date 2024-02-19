@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: {
+        color: $bg;
+    }
+    font: {
+        family: $font_base;
+        size: 14px;
+        weight: 500;
+    }
+    line: {
+        height: 1.5rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+    

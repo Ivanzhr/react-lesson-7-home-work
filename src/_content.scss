@@ -1,0 +1,42 @@
+.content {
+    width: calc(100% - 80px - 100px);
+    margin: 36px 40px 36px auto;
+    align-items: center;
+    @extend %inner_structure;
+    
+    @include screen{
+        width: calc(100% - 190px - 300px);
+        margin: 36px 95px 36px auto;
+    }
+
+    &__header {
+        font: {
+            size: 1.7rem;
+            weight: 500;
+        }        
+    }
+
+    &__table {
+        border-radius: 30px;
+        box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
+        background: $bg_block;
+        padding: 40px;
+        display: grid;
+        gap: 30px;
+    }
+
+    &__row {        
+        p {
+            color: $text_accent2;
+            margin: 10px 0;
+        }
+
+        &--top {
+            display: grid;
+            
+            @include tablet {
+                grid-template-columns: 1fr 216px;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.user {
+    display:flex;
+    gap: 1rem;
+
+    &__avatar {
+        width: 42px;
+        height:42px;
+        border-radius: 50%;
+        overflow:hidden;
+    }
+
+    &__content{
+        opacity: 0;
+        @include transition(opacity);
+
+        @include screen {
+            opacity:1;
+        }
+    }
+
+    &__name {
+        font: {
+            weight:500;
+        }
+    }
+
+    &__job{
+        font: {
+            size: 0.8rem;
+        }
+        color: $text_avatar;
+    }
+}

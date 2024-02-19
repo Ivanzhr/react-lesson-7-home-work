@@ -1,0 +1,27 @@
+.pagination {
+    color: $text_accent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    
+    @include screen {
+        flex-direction: row;
+    }
+    &__items {
+        display: flex;
+        gap:12px;
+    }
+
+    &__item {
+        width: 26px;
+
+        &--all {
+            background:{
+                color: transparent;
+                }
+            border:none;
+        }
+    }
+}

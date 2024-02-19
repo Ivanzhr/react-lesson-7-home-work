@@ -1,0 +1,29 @@
+.search {
+    background: {
+        color: $bg_field;
+    }
+    padding: 10px;
+    border-radius:10px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+
+    &__icon {
+        width: 20px;
+        height:20px;
+        fill: #7e7e7e;
+    }
+
+    &__field {
+        border:none;
+        outline:none;
+    }
+
+    input::placeholder {
+        font: {
+            family: $font_base;
+            size: 0.8rem;
+        };
+        color: $text_accent;
+    }
+}

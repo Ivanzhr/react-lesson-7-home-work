@@ -1,0 +1,124 @@
+.table {
+    width: 100%;
+    border-collapse:collapse;
+
+    tbody{
+        display: grid;
+        width: inherit;
+        gap: 14px;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include screen {
+            display: table;
+        }
+    }    
+
+
+
+    tr{
+        border: 1px solid $accent5;
+        @include screen {
+            border:none;
+            border-bottom: 1px solid $accent5;
+        }
+        
+    }
+
+    th{
+        padding: 14px 0;
+        text-align:left;
+    }
+
+    td {
+        padding: 12px;
+
+        @include phone {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+        
+        @include screen {
+            padding: 24px 0;
+            display: table-cell;
+        }
+
+        &::before {
+           color: $text_accent;
+
+           @include screen {
+                display:none;
+           }
+        }
+    }
+
+    &__head {
+        color: $text_accent;
+        display: none;
+
+        @include screen {
+            display: table-row;
+        }
+    }
+
+    &__row {
+        display: grid;
+        border-radius: 5px;
+        overflow:hidden;
+        
+        @include screen {
+            display: table-row;
+        }
+    }
+
+    &__name{
+        font: {
+            weight: 600;
+        }
+        background: {
+            color: $accent5;           
+        }  
+        grid-template-columns: 1fr!important;
+
+        @include screen {
+            background: {
+                color: transparent;
+            }
+            font: {
+                weight: 500;
+            }
+            grid-template-columns: none;
+        }      
+        
+    }
+
+    &__company {
+        &::before {
+            content: 'Company: ';
+        }        
+    }
+
+    &__phone{
+        &::before {
+            content: 'Phone: ';
+        }
+    }
+
+    &__email {
+        &::before {
+            content: 'Email: ';
+        }
+    }
+
+    &__country {
+        &::before {
+            content: 'Country: ';
+        }
+    }
+
+    &__status {
+        grid-template-columns: 1fr!important;
+    }
+}

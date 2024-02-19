@@ -1,0 +1,32 @@
+.btn {
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px;
+    width: 84px;
+    height: 29px;
+    border-radius: 4px;
+    text-align:center;
+    margin: 0 auto;
+
+    &--green {
+        @include btn_variant($accent2, $accent1);
+    }
+
+    &--red {
+        @include btn_variant($accent4, $accent3);        
+    }
+
+    &--gray {
+        background: {
+            color: $accent6;
+        }
+        border: 1px solid $accent5;
+        color: $text_accent3;        
+    }
+
+    &--violet {
+        @include btn_variant($bg_active, $bg-active, #fff);
+    }
+}
